@@ -159,12 +159,4 @@ for i in range(0,9):
         turn='O'
     else:
         turn='X'
-    
-
-#Manual mode done
-        #prepare tic tac toe game w/ Computer
-
-
-
-#Would the player like to play another game
 '''
