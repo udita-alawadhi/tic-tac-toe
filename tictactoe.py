@@ -55,7 +55,7 @@ def choosePlayerMove():
                 if pos not in (1,2,3,4,5,6,7,8,9):
                     print('Please enter appropriate position.')
                 else:
-                    if freespace(pos):
+                    if freespace(pos, board):
                         return pos
                     else:
                         print('This position is already taken.')
@@ -74,7 +74,7 @@ def duplicate(board):
         bo[i]=board[i]
     return bo
 
-def chooseComputerMove():
+def chooseComputerMove(comp):
     if comp=='X':
         playeris='O'
     else:
