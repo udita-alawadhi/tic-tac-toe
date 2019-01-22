@@ -131,6 +131,8 @@ def Winner(board, turn):
 
 
 play=True
+playerScore=0
+computerScore=0
 while play:
     print('-------WELCOME TO THE TIC-TAC-TOE GAME-------')
     #--start here
@@ -154,6 +156,7 @@ while play:
             if Winner(board, player):
                 printBoard(board)
                 print('Congratulations!! You won')
+                playerScore+=1
                 gameOn =False
             else:
                 turn='Computer'
@@ -172,11 +175,13 @@ while play:
             if Winner(board, computer):
                 printBoard(board)
                 print('You lose. The computer won')
+                computerScore+=1
                 gameOn =False
             else:
                 turn='Player'
     #---
-                
+    
+    print('Computer: '+str(computerScore)+ ' Player: ' + str(playerScore) + '\n')
     play=playAgain()
     board=[' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']
     
