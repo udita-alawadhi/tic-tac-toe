@@ -117,7 +117,10 @@ def chooseComputerMove(comp):
                 freeCorners.append(i)
         return random.choice(freeCorners)
     
-        return random.choice(empty)    
+        if freespace(5, board):
+            return 5
+        else:
+            return random.choice(empty)    
     
 def Winner(board, turn):
     return ((board[1]==board[2]==board[3]==turn) or 
